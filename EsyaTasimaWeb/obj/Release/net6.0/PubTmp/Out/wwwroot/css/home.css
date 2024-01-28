@@ -1,0 +1,56 @@
+﻿.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.image-container {
+    text-align: center;
+}
+
+    .image-container img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .image-container a {
+        display: block;
+        text-align: center;
+        color: #000000;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+        .image-container a:hover {
+            color: #FF0000; 
+        }
+
+.special {
+    color: #0000FF; /* Örnek olarak mavi renk seçildi */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+p.special {
+    color: black; /* Örnek olarak mavi renk seçildi */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h1 {
+    background-color: #f2f2f2 !important;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

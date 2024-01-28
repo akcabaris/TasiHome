@@ -1,0 +1,117 @@
+html {
+    font-size: 14px;
+    background-color: #F2F2F2;
+    color: #F2F2F2;
+}
+
+@media (min-width: 768px) {
+    html {
+        color: #F2F2F2;
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background-color:aliceblue;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #F2F2F2;
+}
+
+.custom-message {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+}
+.page-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+}
+
+
+.page-title:hover {
+   color: #ff0000;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group label,
+.form-group select,
+.form-group input,
+.form-group span {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+}
+
+
+label.control-label {
+    color: #212322;
+    font-weight: bold;
+}
+
+input.form-control {
+    width: 300px;
+}
+select.form-control {
+    width: 300px;
+}
+
+
+
+
+input[type="submit"].btn-primary {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #212322;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    input[type="submit"].btn-primary:hover {
+        background-color: black;
+    }
+
+h1 {
+    background-color: #f2f2f2 !important;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+

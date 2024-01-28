@@ -1,0 +1,14 @@
+﻿<hr />
+<h2>@ViewBag.Title Giriş Yapınız </h2>
+<p>@TempData["error"]</p>
+<hr />
+<form method="post" asp-controller="Login" asp-action="Index">
+    <p><input type="text" name="username" value="" placeholder="Username or Email" required></p>
+    <p><input type="password" name="password" value="" placeholder="Password" required></p>
+    <p class="submit"><input style="background-color:dimgray; color:antiquewhite" type="submit" name="commit" value="Giriş"></p>
+    @ViewBag.Mesaj
+</form>
+<a asp-controller="User" asp-action="Create" class="submit">
+    <input style="background-color: dimgray; color: antiquewhite" type="submit" name="commit" value="Üye Ol">
+</a>
+<hr />

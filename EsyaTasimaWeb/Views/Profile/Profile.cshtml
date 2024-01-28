@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ServiceETW.ViewModels.UserVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 class="hesap-bilgilerim">Hesap Bilgilerim</h1>
+
+
+<style>
+    .hesap-bilgilerim {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ad Soyad
+            </th>
+
+            <th>
+                Parola
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Telefon Numaram
+            </th>
+
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+
+                <td>
+                    ********
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-controller="Profile" asp-route-UserId="@item.Id" class="highlight-link">Bilgilerimi Güncelle</a>
+                </td>
+                <td>
+                    <a asp-action="Mine" asp-controller="Ilan" asp-route-UserId="@item.Id" class="highlight-link">ilanlarımı görüntüle</a>
+                </td>
+                <td>
+                    <a asp-action="Logout" asp-controller="Login" asp-route-UserId="@item.Id" class="" style="color:black">Çıkış Yap</a>
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+

@@ -1,0 +1,14 @@
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.csproj.AssemblyReference.cache
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.AssemblyInfoInputs.cache
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.AssemblyInfo.cs
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.csproj.CoreCompileInputs.cache
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\bin\Debug\net6.0\ServiceETW.deps.json
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\bin\Debug\net6.0\ServiceETW.runtimeconfig.json
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\bin\Debug\net6.0\ServiceETW.dll
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\bin\Debug\net6.0\ServiceETW.pdb
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.dll
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\refint\ServiceETW.dll
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.pdb
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ServiceETW.genruntimeconfig.cache
+C:\Users\souve\source\repos\akcabaris\EsyaTasimaWeb\ServiceETW\obj\Debug\net6.0\ref\ServiceETW.dll

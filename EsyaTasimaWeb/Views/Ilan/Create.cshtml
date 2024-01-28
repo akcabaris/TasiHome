@@ -1,0 +1,86 @@
+﻿@model ServiceETW.ViewModels.IlanVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<script src="~/js/site.js"></script>
+
+<link rel="stylesheet" href="~/css/forCreatePages.css" />
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>İlan Oluştur</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <h1>İlan Oluştur</h1>
+</head>
+</html>
+
+<div   class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" style="background-color:#F2F2F2">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="form-group">
+                <label asp-for="Baslik" class="control-label">İlan Başlığı</label>
+                <input asp-for="Baslik" class="form-control" />
+                <span asp-validation-for="Baslik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label">İlan Açıklaması</label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Sehir" class="control-label">Şehir</label>
+                <select asp-for="Sehir" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="İstanbul">İstanbul</option>
+                    <option value="Ankara">Ankara</option>
+                    <option value="İzmir">İzmir</option>
+                </select>
+                <span asp-validation-for="Sehir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ilce" class="control-label">İlçe</label>
+                <input asp-for="Ilce" class="form-control" />
+                <span asp-validation-for="Ilce" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ilantipi" class="control-label">İlan Tipi</label>
+                <select asp-for="Ilantipi" class="form-control">
+                    <option value="">Seçiniz</option>
+                    <option value="Ofis">Ofis</option>
+                    <option value="Konut">Konut</option>
+                    <option value="Diğer">Diğer</option>
+                </select>
+                <span asp-validation-for="Ilantipi" class="text-danger"></span>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <br />
+                <input type="submit" value="İlanı Oluştur" class="btn btn-primary" style="display: block; margin: 0 auto;" />
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

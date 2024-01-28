@@ -1,0 +1,77 @@
+﻿@model ServiceETW.ViewModels.UserVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<script src="~/js/site.js"></script>
+
+<link rel="stylesheet" href="~/css/forCreatePages.css" />
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Üye Ol</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <h1>Üye Ol</h1>
+</head>
+</html>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label">Ad Soyad</label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Parola</label>
+                <input asp-for="Password" class="form-control" maxlength="15" type="password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" maxlength="45" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label">Telefon</label>
+                <input asp-for="PhoneNumber" class="form-control" maxlength="11" pattern="[0-9]{11}" />
+
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <br />
+                <input type="submit" value="Üye Ol" class="btn btn-primary" style="display: block; margin: 0 auto;" />
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <br>
+    <a asp-action="Index" asp-controller="Login" style="color: black" ;>Giriş Yapmaya Geri Dön</a>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

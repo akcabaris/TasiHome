@@ -1,0 +1,130 @@
+﻿@model IEnumerable<ServiceETW.ViewModels.IlanVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="text-align: center;">
+    <img src="https://cdn3.iconfinder.com/data/icons/real-estate-industry-and-construction/32/real_estate_19-128.png" alt="Real Estate Icon" style="vertical-align: middle;">
+    
+</h1><h2 style="text-align: center; color:black">İlanlar</h2>
+
+
+
+<form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Şehir Ara" onkeyup="capitalizeFirstLetter(this)">
+    <button type="submit">Ara</button>
+</form>
+
+<script>
+    function capitalizeFirstLetter(input) {
+        input.value = input.value.charAt(0).toLocaleUpperCase('tr') + input.value.slice(1);
+    }
+</script>
+
+
+
+<script src="~/js/site.js"></script>
+
+<link rel="stylesheet" href="~/css/forIlanPage.css" />
+
+
+
+<div style="display: flex; justify-content: end;">
+    <a asp-action="Create" class="my-button">
+        <img src="https://cdn4.iconfinder.com/data/icons/marketing-39/512/advertisement-32.png" alt="Real Estate Icon">
+        İLAN VER</a>
+    
+</div>
+<Br />
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Başlık
+            </th>
+            <th>
+                Açıklama
+                <img src="https://cdn0.iconfinder.com/data/icons/free-daily-icon-set/512/Comments-32.png" alt="Real Estate Icon">
+               
+            </th>
+            <th>
+                Şehir
+            </th>
+            <th>
+                İlçe
+            </th>
+
+            <th style="width: 100px;">
+                İlan Tipi
+            </th>
+
+            <th>
+                <img src="https://cdn2.iconfinder.com/data/icons/wedding-hand-drawn-icons/64/wedding_43-32.png" alt="Real Estate Icon">
+                Tarih
+            </th>
+
+            <th>
+                <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_local_phone_48px-32.png" alt="Real Estate Icon">
+                İletişim
+            </th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aciklama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sehir)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ilce)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ilantipi)
+                </td>
+                <td>
+                    @item.Tarih.ToString("dd.MM.yyyy HH:mm")
+                </td>
+                <td class="highlight-link">
+                    @Html.DisplayFor(modelItem => item.UserTelNo) <br>
+                    <b>@Html.DisplayFor(modelItem => item.UserFullName)</b>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+<script>
+
+    // Form submit olayını dinleyen fonksiyon
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Formun submit olayını engelle
+
+        var searchValue = document.getElementById("searchInput").value; // Arama değerini al
+
+        // Tablodaki her satırı kontrol et
+        var tableRows = document.getElementById("tableBody").getElementsByTagName("tr");
+        for (var i = 0; i < tableRows.length; i++) {
+            var row = tableRows[i];
+            var cityCell = row.getElementsByTagName("td")[2]; // Şehir sütununu seç
+
+            // Arama değeriyle şehir eşleşiyorsa satırı göster, eşleşmiyorsa gizle
+            if (cityCell.textContent.trim().toLowerCase() === searchValue.toLowerCase()) {
+                row.style.display = ""; // Satırı göster
+            } else {
+                row.style.display = "none"; // Satırı gizle
+            }
+        }
+    });
+</script>

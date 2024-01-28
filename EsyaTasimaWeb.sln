@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EsyaTasimaWeb", "EsyaTasimaWeb\EsyaTasimaWeb.csproj", "{104052BE-5406-4105-BA6E-ACF2740124B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{19213EAA-E74C-460D-B494-12AE76A42ADB} = {19213EAA-E74C-460D-B494-12AE76A42ADB}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceETW", "ServiceETW\ServiceETW.csproj", "{19213EAA-E74C-460D-B494-12AE76A42ADB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{104052BE-5406-4105-BA6E-ACF2740124B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104052BE-5406-4105-BA6E-ACF2740124B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104052BE-5406-4105-BA6E-ACF2740124B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104052BE-5406-4105-BA6E-ACF2740124B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19213EAA-E74C-460D-B494-12AE76A42ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19213EAA-E74C-460D-B494-12AE76A42ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19213EAA-E74C-460D-B494-12AE76A42ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19213EAA-E74C-460D-B494-12AE76A42ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEC864B1-C754-4EE4-9555-4C6EE5D93297}
+	EndGlobalSection
+EndGlobal
